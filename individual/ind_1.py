@@ -18,7 +18,7 @@ def tree(directory: Path, dir: bool, pattern: str, sep: str) -> None:
     for path in sorted(directory.rglob(pattern)):
         depth: int = len(path.relative_to(directory).parts)
         spacer: str = '\t' * depth
-        print(spacer + sep + ' ' + path.name)
+        print(f"{spacer} {sep} {path.name}")
 
 
 def main(command_line=None):
